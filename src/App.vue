@@ -1,20 +1,23 @@
 <template>
     <v-app>
         <Navbar />
-        <v-content>
+        <v-main>
             <router-view />
-        </v-content>
+        </v-main>
+        <Footer />
     </v-app>
 </template>
 
 <script>
 import Navbar from './components/Navbar';
+import Footer from './components/Footer';
 
 export default {
     name: 'App',
 
     components: {
-        Navbar
+        Navbar,
+        Footer
     },
 
     data: () => ({
@@ -25,6 +28,7 @@ export default {
 <style>
 .v-application--wrap,
 .v-card {
-    background-color: black !important;
+    background-image: url('./assets/welder-background.jpg');
+    background-position: center;
 }
 </style>

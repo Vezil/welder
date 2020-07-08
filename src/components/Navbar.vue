@@ -1,31 +1,25 @@
 <template>
     <div>
-        <v-navigation-drawer v-model="drawer" app color="green darken-3" dark>
+        <v-navigation-drawer v-model="drawer" app color="blue-grey darken-3" dark>
             <v-list dense>
                 <router-link to="/">
                     <v-list-item class="menu_el">
                         <v-list-item-content>
-                            <v-list-item-title class="tile"
-                                >Home</v-list-item-title
-                            >
+                            <v-list-item-title class="tile">Home</v-list-item-title>
                         </v-list-item-content>
                     </v-list-item>
                 </router-link>
                 <router-link to="/about">
                     <v-list-item class="menu_el">
                         <v-list-item-content>
-                            <v-list-item-title class="tile"
-                                >About</v-list-item-title
-                            >
+                            <v-list-item-title class="tile">About</v-list-item-title>
                         </v-list-item-content>
                     </v-list-item>
                 </router-link>
             </v-list>
         </v-navigation-drawer>
-        <v-app-bar app color="green darken-2" dark>
-            <v-app-bar-nav-icon
-                @click.stop="drawer = !drawer"
-            ></v-app-bar-nav-icon>
+        <v-app-bar app color="blue-grey darken-2" dark>
+            <v-app-bar-nav-icon @click.stop="drawer = !drawer"></v-app-bar-nav-icon>
             <v-toolbar-title>Welder</v-toolbar-title>
         </v-app-bar>
     </div>
@@ -49,6 +43,6 @@ export default {
     margin-top: 20px;
 }
 .menu_el:hover {
-    background-color: #2a682d;
+    background-color: #263238;
 }
 </style>
