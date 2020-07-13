@@ -9,17 +9,32 @@ Vue.use(VueRouter);
 const routes = [
     {
         path: '/',
-        name: 'home',
-        component: Home
+        redirect: '/en'
     },
     {
-        path: '/about',
-        name: 'about',
-        component: About
+        path: '/:lang',
+        component: {
+            render(c) {
+                return c('router-view');
+            }
+        },
+        children: [
+            {
+                path: '/',
+                name: 'home',
+                component: Home
+            },
+            {
+                path: 'about',
+                name: 'about',
+                component: About
+            }
+        ]
     }
 ];
 
 const router = new VueRouter({
+    mode: 'history',
     routes
 });
 
