@@ -1,6 +1,10 @@
 <template>
     <div>
         <v-navigation-drawer v-model="drawer" app color="blue-grey darken-3" dark>
+            <div>
+                <language-switcher />
+            </div>
+
             <v-list dense>
                 <router-link :to="`/${$i18n.locale}`">
                     <v-list-item class="menu_el">
@@ -33,8 +37,14 @@
     </div>
 </template>
 <script>
+import LanguageSwitcher from './LanguageSwitcher';
+
 export default {
     name: 'Navbar',
+
+    components: {
+        LanguageSwitcher
+    },
 
     data() {
         return {
