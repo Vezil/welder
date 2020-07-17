@@ -2,5 +2,13 @@
     "nav": {
         "home": "Strona Głowna",
         "about_us": "O Nas"
+    },
+
+    "homepage": {
+        "content": "Witaj na stronie głownej"
+    },
+
+    "about": {
+        "content": "Witaj na stronie o nas"
     }
 }

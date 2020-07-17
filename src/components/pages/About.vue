@@ -1,6 +1,6 @@
 <template>
     <div>
-        <h1 class="message">Hello from About</h1>
+        <h1 class="message">{{ $t('about.content') }}</h1>
     </div>
 </template>
 

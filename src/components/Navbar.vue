@@ -1,36 +1,33 @@
 <template>
     <div>
-        <v-navigation-drawer
-            v-model="drawer"
-            app
-            color="blue-grey darken-3"
-            dark
-        >
+        <v-navigation-drawer v-model="drawer" app color="blue-grey darken-3" dark>
             <v-list dense>
-                <router-link to="/">
+                <router-link :to="`/${$i18n.locale}`">
                     <v-list-item class="menu_el">
                         <v-list-item-content>
-                            <v-list-item-title class="tile">{{
+                            <v-list-item-title class="tile">
+                                {{
                                 $t('nav.home')
-                            }}</v-list-item-title>
+                                }}
+                            </v-list-item-title>
                         </v-list-item-content>
                     </v-list-item>
                 </router-link>
-                <router-link to="/about">
+                <router-link :to="`/${$i18n.locale}/about`">
                     <v-list-item class="menu_el">
                         <v-list-item-content>
-                            <v-list-item-title class="tile">{{
+                            <v-list-item-title class="tile">
+                                {{
                                 $t('nav.about_us')
-                            }}</v-list-item-title>
+                                }}
+                            </v-list-item-title>
                         </v-list-item-content>
                     </v-list-item>
                 </router-link>
             </v-list>
         </v-navigation-drawer>
         <v-app-bar app color="blue-grey darken-2" dark>
-            <v-app-bar-nav-icon
-                @click.stop="drawer = !drawer"
-            ></v-app-bar-nav-icon>
+            <v-app-bar-nav-icon @click.stop="drawer = !drawer"></v-app-bar-nav-icon>
             <v-toolbar-title>Welder</v-toolbar-title>
         </v-app-bar>
     </div>
@@ -38,6 +35,7 @@
 <script>
 export default {
     name: 'Navbar',
+
     data() {
         return {
             drawer: null

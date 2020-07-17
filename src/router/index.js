@@ -3,13 +3,14 @@ import VueRouter from 'vue-router';
 
 import Home from '../components/pages/Home';
 import About from '../components/pages/About';
+import i18n from '../i18n';
 
 Vue.use(VueRouter);
 
 const routes = [
     {
         path: '/',
-        redirect: '/en'
+        redirect: `/${i18n.locale}`
     },
     {
         path: '/:lang',
