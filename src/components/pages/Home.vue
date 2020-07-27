@@ -10,6 +10,5 @@
     color: burlywood;
     margin: auto;
     text-align: center;
-    width: 1000px;
 }
 </style>

@@ -1,11 +1,10 @@
 <template>
-    <div class="changer">
-        <v-select
-            v-model="$i18n.locale"
-            :items="languages"
-            label="Change Language"
-            :append-icon="false"
-        ></v-select>
+    <div class="changer row">
+        <v-select v-model="$i18n.locale" :items="languages" label="Change Language" class="col-8"></v-select>
+
+        <div class="col-2">
+            <img :src="flag" :alt="$i18n.locale" />
+        </div>
     </div>
 </template>
 
@@ -13,6 +12,12 @@
 export default {
     data() {
         return { languages: ['pl', 'en'] };
+    },
+
+    computed: {
+        flag() {
+            return require(`../assets/${this.$i18n.locale}.png`);
+        }
     }
 };
 </script>
